@@ -8,6 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import java.util.List;
+
+import static org.assertj.core.api.ClassBasedNavigableIterableAssert.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -33,6 +36,6 @@ public class UpdatePlayerIntegrationTest {
 
         String response = result.getResponse().getContentAsString();
         // Assertions
-        assertThat(response).isEqualTo("{\"id\":1,\"field\":\"value\"}");
+        assert(response).equals("{\"id\":1,\"field\":\"value\"}");
     }
 }
