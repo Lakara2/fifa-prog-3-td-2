@@ -55,9 +55,6 @@ class MatchIntegrationTest {
 
         assertEquals(3, actual.size());
         assertTrue(actual.contains(expectedMatch2()));
-
-        //TODO: add these checks and its values
-
         assertTrue(actual.contains(expectedMatch1()));
         assertTrue(actual.contains(expectedMatch3()));
     }
